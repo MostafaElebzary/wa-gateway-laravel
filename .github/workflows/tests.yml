@@ -17,13 +17,16 @@ jobs:
             laravel: '13.*' # Laravel 13 needs PHP 8.3+
     name: PHP ${{ matrix.php }} · Laravel ${{ matrix.laravel }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
           coverage: none
       - name: Install dependencies
         run: |
+          # Laravel 11 is out of security support: Composer blocks it because of advisories.
+          # We still check that the package works with it.
+          if [ "${{ matrix.laravel }}" = "11.*" ]; then composer config audit.block-insecure false; fi
           composer require "illuminate/support:${{ matrix.laravel }}" "illuminate/http:${{ matrix.laravel }}" "illuminate/notifications:${{ matrix.laravel }}" --no-update --no-interaction
           composer update --prefer-dist --no-interaction --no-progress
       - name: Run tests

@@ -6,7 +6,7 @@ Send WhatsApp messages from your Laravel app with Laravel's notifications, throu
 $order->customer->notify(new OrderShipped($order));
 ```
 
-Works with Laravel 11, 12 and 13 (PHP 8.2+).
+Works with Laravel 11, 12 and 13 (PHP 8.2+). Laravel 11 no longer receives security fixes from the Laravel team, so upgrading is recommended.
 
 ## Install
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- CI: test Laravel 11 despite Composer's security-advisory block (Laravel 11 is out of
+  security support).
+
 ## 1.0.0 (2026-10-17)
 
 First release.
