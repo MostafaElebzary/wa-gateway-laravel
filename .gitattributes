@@ -1,0 +1,7 @@
+# Keep installs small: tests and dev files are not needed in vendor/.
+/tests            export-ignore
+/.github          export-ignore
+/.gitattributes   export-ignore
+/.gitignore       export-ignore
+/phpunit.xml      export-ignore
+/CHANGELOG.md     export-ignore

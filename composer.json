@@ -1,0 +1,54 @@
+{
+    "name": "wa-gateway/laravel-notification-channel",
+    "description": "Send WhatsApp messages from Laravel notifications through the WA Gateway API.",
+    "keywords": [
+        "laravel",
+        "notifications",
+        "whatsapp",
+        "wa-gateway"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mostafa EL-Ebzary"
+        }
+    ],
+    "homepage": "https://github.com/MostafaElebzary/wa-gateway-laravel",
+    "support": {
+        "issues": "https://github.com/MostafaElebzary/wa-gateway-laravel/issues",
+        "source": "https://github.com/MostafaElebzary/wa-gateway-laravel"
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/notifications": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^11.5|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WaGateway\\NotificationChannel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WaGateway\\NotificationChannel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WaGateway\\NotificationChannel\\WaGatewayServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
