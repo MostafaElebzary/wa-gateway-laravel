@@ -14,14 +14,6 @@ Works with Laravel 11, 12 and 13 (PHP 8.2+). Laravel 11 no longer receives secur
 composer require wa-gateway/laravel-notification-channel
 ```
 
-> Not on Packagist yet? Add the repository to your `composer.json` first, then run the same command:
->
-> ```json
-> "repositories": [
->     { "type": "vcs", "url": "https://github.com/MostafaElebzary/wa-gateway-laravel" }
-> ]
-> ```
-
 Laravel discovers the service provider automatically. To customise the config file:
 
 ```bash
